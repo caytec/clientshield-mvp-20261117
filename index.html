@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freelance Scam Checker — Check a Client or Job Post Free</title>
+  <meta name="description" content="Paste a freelance job post or client message to find payment, scope, identity, and scam red flags. Get a free risk report and safer reply without signing up.">
+  <meta name="theme-color" content="#f6f8fb">
+  <link rel="canonical" href="https://caytec.github.io/clientshield-mvp-20261117/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta property="og:title" content="ClientShield — Freelance Scam Checker">
+  <meta property="og:description" content="Find freelance payment, scope, identity, and account-access red flags before you lose money or free work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://caytec.github.io/clientshield-mvp-20261117/">
+  <meta property="og:site_name" content="ClientShield">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://caytec.github.io/clientshield-mvp-20261117/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ClientShield — Freelance Scam Checker">
+  <meta name="twitter:description" content="Find freelance payment, scope, identity, and account-access red flags before you lose money or free work.">
+  <meta name="twitter:image" content="https://caytec.github.io/clientshield-mvp-20261117/assets/og.png">
+  <script src="js/config.js"></script>
+  <script src="js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "@id":"https://caytec.github.io/clientshield-mvp-20261117/#webapp",
+    "name":"ClientShield",
+    "url":"https://caytec.github.io/clientshield-mvp-20261117/",
+    "image":"https://caytec.github.io/clientshield-mvp-20261117/assets/og.png",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Web",
+    "description":"A rules-first freelance scam checker for client messages and job posts.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+  }
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">ClientShield</a>
+  <nav aria-label="Primary">
+    <a href="./">Home</a>
+    <a href="freelance-scam-checker.html">Scam Checker</a>
+    <a href="freelance-job-scam-red-flags.html">Red Flags</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">Freelance Scam Checker</p>
+    <h1>Is This Freelance Client Legit?</h1>
+    <p class="lede">Find the red flags before you lose money, free work, or account access.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="checker-title">
+    <h2 id="checker-title">Screen a job post or client message</h2>
+    <p class="notice"><strong>Privacy first:</strong> Do not submit passwords, identity documents, bank details, private keys, or confidential files. Text is screened, not intentionally stored by this site.</p>
+
+    <form id="check-form" autocomplete="off">
+      <label for="platform">Platform</label>
+      <select id="platform" name="platform">
+        <option value="Other" selected>Other</option>
+        <option value="Upwork">Upwork</option>
+        <option value="Fiverr">Fiverr</option>
+        <option value="LinkedIn">LinkedIn</option>
+        <option value="Email">Email</option>
+        <option value="Discord/Telegram">Discord/Telegram</option>
+        <option value="Direct website">Direct website</option>
+      </select>
+
+      <label for="website">Client or company website <span>(optional; sent as text only, never fetched)</span></label>
+      <input id="website" name="website" maxlength="300" autocomplete="off" inputmode="url" placeholder="Example: example.com">
+
+      <label for="message">Job post or client message</label>
+      <textarea id="message" name="message" maxlength="8000" required autocomplete="off" spellcheck="true" placeholder="Paste the message here…"></textarea>
+      <div class="counter"><span id="count">0</span>/8,000 characters</div>
+
+      <fieldset>
+        <legend>What else happened?</legend>
+        <label><input name="signals" type="checkbox" value="money"> They requested money</label>
+        <label><input name="signals" type="checkbox" value="free"> They requested free work</label>
+        <label><input name="signals" type="checkbox" value="offplatform"> They asked me to move off-platform</label>
+        <label><input name="signals" type="checkbox" value="sensitive"> They requested a file, login, or sensitive information</label>
+      </fieldset>
+
+      <button id="submit" type="submit">Check for red flags</button>
+      <button id="example" class="secondary" type="button">Try an example</button>
+      <p id="status" class="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="results" class="panel results" hidden tabindex="-1" aria-labelledby="results-title">
+    <div class="result-head">
+      <div>
+        <p class="eyebrow">Screening estimate</p>
+        <h2 id="results-title">Your result</h2>
+      </div>
+      <div id="score" class="score" aria-label="Risk score"></div>
+    </div>
+    <p id="summary"></p>
+    <div id="flags"></div>
+    <div id="checks"></div>
+    <div id="reply-box"></div>
+    <div class="actions">
+      <button id="copy-reply" class="secondary" type="button">Copy safer reply</button>
+      <button id="copy-share" class="secondary" type="button">Copy share text</button>
+      <button id="download" class="secondary" type="button">Download card</button>
+    </div>
+    <p class="disclaimer">ClientShield is an educational screening estimate, not proof of fraud, legal advice, financial advice, or cybersecurity verification. “No obvious red flags” does not mean safe.</p>
+  </section>
+
+  <section class="info" aria-labelledby="how-title">
+    <h2 id="how-title">How the freelance scam checker works</h2>
+    <p>ClientShield checks common payment, identity, scope, urgency, recruitment, and account-access patterns. A deterministic rules report remains available when an AI provider is unavailable. Use the result to pause, verify independently, and avoid sending money or sensitive information.</p>
+    <div class="cards">
+      <article><h3>Explainable</h3><p>Every detected signal includes evidence and a practical next step.</p></article>
+      <article><h3>No sign-up</h3><p>Paste text and get a report without creating an account.</p></article>
+      <article><h3>Privacy-minded</h3><p>Share cards exclude the original message and personal details.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 ClientShield · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></footer>
+</body>
+</html>
