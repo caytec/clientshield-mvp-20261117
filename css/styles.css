@@ -1,0 +1,317 @@
+:root {
+  --ink: #172033;
+  --muted: #5f6b80;
+  --paper: #f6f8fb;
+  --card: #ffffff;
+  --line: #dce3ee;
+  --blue: #2857d8;
+  --focus: #173ea5;
+  --danger: #b42318;
+  --amber: #8a4b00;
+  --green: #16734a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: var(--blue);
+}
+
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.site-header,
+main,
+footer {
+  max-width: 980px;
+  margin: auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 20px;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.brand {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+main {
+  padding: 30px 20px 70px;
+}
+
+.hero {
+  padding: 34px 0;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.05;
+}
+
+h2 {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.lede {
+  max-width: 600px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.panel {
+  max-width: 760px;
+  margin: 25px auto;
+  padding: clamp(20px, 4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 8px 30px #1720330b;
+}
+
+.notice {
+  padding: 12px 14px;
+  border-left: 4px solid #e5a11a;
+  background: #fff7e6;
+  font-size: 0.92rem;
+}
+
+label,
+legend {
+  display: block;
+  margin-top: 18px;
+  font-weight: 700;
+}
+
+label span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border: 1px solid #bbc6d8;
+  border-radius: 9px;
+  background: #fff;
+  font: inherit;
+}
+
+textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.counter {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+fieldset {
+  margin: 20px 0;
+  padding: 4px 14px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+fieldset label {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+fieldset input {
+  display: inline;
+  width: auto;
+  margin: 0 8px 0 0;
+}
+
+button {
+  margin: 8px 8px 0 0;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--blue);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.secondary {
+  background: #e9eefb;
+  color: #1d3d9a;
+}
+
+.status {
+  min-height: 1.5em;
+  color: var(--muted);
+}
+
+.results {
+  border-top: 5px solid var(--blue);
+}
+
+.result-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.score {
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.flag,
+.check {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.flag strong {
+  display: block;
+}
+
+.high,
+.critical {
+  color: var(--danger);
+}
+
+.medium {
+  color: var(--amber);
+}
+
+.low {
+  color: var(--green);
+}
+
+.checks-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reply {
+  padding: 16px;
+  border-radius: 10px;
+  background: #f2f5fa;
+  white-space: pre-wrap;
+}
+
+.disclaimer {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.info {
+  padding: 28px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.cards article {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.cards h3 {
+  margin-top: 0;
+}
+
+.content-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer {
+  padding: 22px 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .result-head {
+    display: block;
+  }
+
+  .score {
+    margin-top: 8px;
+    text-align: left;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

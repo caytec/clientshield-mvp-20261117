@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://caytec.github.io/clientshield-mvp-20261117/sitemap.xml
