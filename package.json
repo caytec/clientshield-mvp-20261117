@@ -1,0 +1,15 @@
+{
+  "name": "clientshield-mvp-20261117",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "node --check api/generate.js && node --check js/app.js && node --check js/config.js",
+    "test": "node --test",
+    "validate:json": "node -e \"JSON.parse(require('fs').readFileSync('vercel.json'))\"",
+    "validate:xml": "node -e \"require('fs').readFileSync('sitemap.xml','utf8'); console.log('sitemap present')\""
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
